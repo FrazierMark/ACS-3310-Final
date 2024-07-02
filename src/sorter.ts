@@ -1,6 +1,14 @@
+/**
+ * Sorter class that contains various sorting algorithms
+ */
 class Sorter {
 	constructor() {}
 
+  /**
+  * Bubble Sort algorithm
+  * @param array - array of numbers to be sorted
+  * @returns sorted array
+  */
 	bubbleSort(array: number[]): number[] {
 		let swapped = false;
 		do {
@@ -17,6 +25,11 @@ class Sorter {
 		return array;
 	}
 
+  /**
+   * Merge Sort algorithm
+   * @param array - array of numbers to be sorted
+   * @returns sorted array
+   */
 	mergeSort(array: number[]): number[] {
 		if (array.length <= 1) {
 			return array;
@@ -27,6 +40,11 @@ class Sorter {
 		return this.#merge(this.mergeSort(left), this.mergeSort(right));
 	}
 
+  /**
+   * Quick Sort algorithm
+   * @param array - array of numbers to be sorted
+   * @returns sorted array
+   */
 	quickSort(array: number[]): number[] {
 		if (array.length <= 1) {
 			return array;
@@ -44,6 +62,11 @@ class Sorter {
 		return [...this.quickSort(left), pivot, ...this.quickSort(right)];
 	}
 
+  /**
+   * Heap Sort algorithm
+   * @param array - array of numbers to be sorted
+   * @returns sorted array
+   */
 	heapSort(array: number[]): number[] {
 		const n = array.length;
 		for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
@@ -58,6 +81,11 @@ class Sorter {
 		return array;
 	}
 
+  /**
+   * Selection Sort algorithm
+   * @param array - array of numbers to be sorted
+   * @returns sorted array
+   */
 	selectionSort(array: number[]): number[] {
 		for (let i = 0; i < array.length; i++) {
 			let min = i;
@@ -75,6 +103,11 @@ class Sorter {
 		return array;
 	}
 
+  /**
+   * Insertion Sort algorithm
+   * @param array - array of numbers to be sorted
+   * @returns sorted array
+   */
 	insertionSort(array: number[]): number[] {
 		for (let i = 1; i < array.length; i++) {
 			const key = array[i];
