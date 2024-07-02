@@ -1,7 +1,7 @@
 {
   "name": "@mfx2/sorting-algorithms-utility",
   "version": "1.0.0",
-  "description": "Sorting Algorithm Utility",
+  "description": "Sorting Algorithms Utility",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage",
